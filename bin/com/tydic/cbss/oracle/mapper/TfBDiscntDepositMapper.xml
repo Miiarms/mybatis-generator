@@ -1,0 +1,1231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tydic.cbss.oracle.dao.TfBDiscntDepositMapper">
+  <resultMap id="BaseResultMap" type="com.tydic.cbss.oracle.po.TfBDiscntDeposit">
+    <id column="ACTION_EVENT_ID" jdbcType="DECIMAL" property="actionEventId" />
+    <id column="PARTITION_ID" jdbcType="DECIMAL" property="partitionId" />
+    <result column="ACTION_RULE_ID" jdbcType="DECIMAL" property="actionRuleId" />
+    <result column="CHARGE_ID" jdbcType="DECIMAL" property="chargeId" />
+    <result column="EPARCHY_CODE" jdbcType="VARCHAR" property="eparchyCode" />
+    <result column="ACCT_BALANCE_ID" jdbcType="DECIMAL" property="acctBalanceId" />
+    <result column="ACTION_CODE" jdbcType="DECIMAL" property="actionCode" />
+    <result column="COND_ID" jdbcType="DECIMAL" property="condId" />
+    <result column="OUTER_TRADE_ID" jdbcType="VARCHAR" property="outerTradeId" />
+    <result column="ACCT_ID" jdbcType="DECIMAL" property="acctId" />
+    <result column="USER_ID" jdbcType="DECIMAL" property="userId" />
+    <result column="DISCNT_TYPE" jdbcType="CHAR" property="discntType" />
+    <result column="DISCNT_ITEM_ID" jdbcType="DECIMAL" property="discntItemId" />
+    <result column="DISCNT_MODE" jdbcType="CHAR" property="discntMode" />
+    <result column="MONEY" jdbcType="DECIMAL" property="money" />
+    <result column="LEFT_MONEY" jdbcType="DECIMAL" property="leftMoney" />
+    <result column="MONTHS" jdbcType="DECIMAL" property="months" />
+    <result column="LIMIT_MODE" jdbcType="CHAR" property="limitMode" />
+    <result column="SPLIT_METHOD" jdbcType="VARCHAR" property="splitMethod" />
+    <result column="LIMIT_MONEY" jdbcType="DECIMAL" property="limitMoney" />
+    <result column="DELAY_TAG" jdbcType="CHAR" property="delayTag" />
+    <result column="START_CYCLE_ID" jdbcType="DECIMAL" property="startCycleId" />
+    <result column="END_CYCLE_ID" jdbcType="DECIMAL" property="endCycleId" />
+    <result column="TIMER_TYPE" jdbcType="CHAR" property="timerType" />
+    <result column="ITEM_GRP_ID" jdbcType="DECIMAL" property="itemGrpId" />
+    <result column="DES_DEPOSIT_CODE" jdbcType="DECIMAL" property="desDepositCode" />
+    <result column="PER_SMS_ID" jdbcType="DECIMAL" property="perSmsId" />
+    <result column="LAST_SMS_ID" jdbcType="DECIMAL" property="lastSmsId" />
+    <result column="FIRE_DAY" jdbcType="DECIMAL" property="fireDay" />
+    <result column="FIRED_MONTH" jdbcType="DECIMAL" property="firedMonth" />
+    <result column="IF_TRANS" jdbcType="CHAR" property="ifTrans" />
+    <result column="REL_ACTION_EVENT_ID" jdbcType="DECIMAL" property="relActionEventId" />
+    <result column="RECV_TIME" jdbcType="DATE" property="recvTime" />
+    <result column="RECV_EPARCHY_CODE" jdbcType="VARCHAR" property="recvEparchyCode" />
+    <result column="RECV_CITY_CODE" jdbcType="VARCHAR" property="recvCityCode" />
+    <result column="RECV_DEPART_ID" jdbcType="VARCHAR" property="recvDepartId" />
+    <result column="RECV_STAFF_ID" jdbcType="VARCHAR" property="recvStaffId" />
+    <result column="CAN_USE_TAG" jdbcType="CHAR" property="canUseTag" />
+    <result column="RSRV_INFO" jdbcType="VARCHAR" property="rsrvInfo" />
+    <result column="RSRV_FEE" jdbcType="DECIMAL" property="rsrvFee" />
+    <result column="CANCEL_TAG" jdbcType="CHAR" property="cancelTag" />
+    <result column="VERSION_NO" jdbcType="DECIMAL" property="versionNo" />
+    <result column="SUM_CONSUME" jdbcType="DECIMAL" property="sumConsume" />
+    <result column="RESULT_INFO" jdbcType="VARCHAR" property="resultInfo" />
+    <result column="CAN_PRE_TRANS" jdbcType="CHAR" property="canPreTrans" />
+    <result column="NET_TYPE_CODE" jdbcType="VARCHAR" property="netTypeCode" />
+    <result column="DEPOSIT_CODE" jdbcType="DECIMAL" property="depositCode" />
+    <result column="DISCOUNT_CODE" jdbcType="DECIMAL" property="discountCode" />
+    <result column="RSRV_DATE1" jdbcType="DATE" property="rsrvDate1" />
+    <result column="ACTIVE_TIME" jdbcType="DATE" property="activeTime" />
+    <result column="CANCEL_STAFF_ID" jdbcType="VARCHAR" property="cancelStaffId" />
+    <result column="CANCEL_DEPART_ID" jdbcType="VARCHAR" property="cancelDepartId" />
+    <result column="CANCEL_CITY_CODE" jdbcType="VARCHAR" property="cancelCityCode" />
+    <result column="CANCEL_EPARCHY_CODE" jdbcType="VARCHAR" property="cancelEparchyCode" />
+    <result column="CANCEL_TIME" jdbcType="DATE" property="cancelTime" />
+    <result column="NEXT_DATE" jdbcType="DATE" property="nextDate" />
+    <result column="P_DEPOSIT_CODE" jdbcType="DECIMAL" property="pDepositCode" />
+    <result column="IF_STOP_TRANS" jdbcType="CHAR" property="ifStopTrans" />
+    <result column="CONSUME_THRESHOLD" jdbcType="DECIMAL" property="consumeThreshold" />
+    <result column="BATCH_ID" jdbcType="DECIMAL" property="batchId" />
+    <result column="TRANS_FORMULA" jdbcType="VARCHAR" property="transFormula" />
+    <result column="EXEC_DATE" jdbcType="DATE" property="execDate" />
+    <result column="TRANS_MONTHS" jdbcType="DECIMAL" property="transMonths" />
+    <result column="RECV_USER_ID" jdbcType="DECIMAL" property="recvUserId" />
+    <result column="PROVINCE_CODE" jdbcType="VARCHAR" property="provinceCode" />
+    <result column="PRODUCT_MONEY" jdbcType="DECIMAL" property="productMoney" />
+    <result column="PRODUCT_START_CYCLE" jdbcType="DECIMAL" property="productStartCycle" />
+    <result column="PRODUCT_END_CYCLE" jdbcType="DECIMAL" property="productEndCycle" />
+    <result column="ACTIVE_RECORD_ID" jdbcType="DECIMAL" property="activeRecordId" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ACTION_EVENT_ID, PARTITION_ID, ACTION_RULE_ID, CHARGE_ID, EPARCHY_CODE, ACCT_BALANCE_ID, 
+    ACTION_CODE, COND_ID, OUTER_TRADE_ID, ACCT_ID, USER_ID, DISCNT_TYPE, DISCNT_ITEM_ID, 
+    DISCNT_MODE, MONEY, LEFT_MONEY, MONTHS, LIMIT_MODE, SPLIT_METHOD, LIMIT_MONEY, DELAY_TAG, 
+    START_CYCLE_ID, END_CYCLE_ID, TIMER_TYPE, ITEM_GRP_ID, DES_DEPOSIT_CODE, PER_SMS_ID, 
+    LAST_SMS_ID, FIRE_DAY, FIRED_MONTH, IF_TRANS, REL_ACTION_EVENT_ID, RECV_TIME, RECV_EPARCHY_CODE, 
+    RECV_CITY_CODE, RECV_DEPART_ID, RECV_STAFF_ID, CAN_USE_TAG, RSRV_INFO, RSRV_FEE, 
+    CANCEL_TAG, VERSION_NO, SUM_CONSUME, RESULT_INFO, CAN_PRE_TRANS, NET_TYPE_CODE, DEPOSIT_CODE, 
+    DISCOUNT_CODE, RSRV_DATE1, ACTIVE_TIME, CANCEL_STAFF_ID, CANCEL_DEPART_ID, CANCEL_CITY_CODE, 
+    CANCEL_EPARCHY_CODE, CANCEL_TIME, NEXT_DATE, P_DEPOSIT_CODE, IF_STOP_TRANS, CONSUME_THRESHOLD, 
+    BATCH_ID, TRANS_FORMULA, EXEC_DATE, TRANS_MONTHS, RECV_USER_ID, PROVINCE_CODE, PRODUCT_MONEY, 
+    PRODUCT_START_CYCLE, PRODUCT_END_CYCLE, ACTIVE_RECORD_ID
+  </sql>
+  <select id="selectByExample" parameterType="com.tydic.cbss.oracle.po.TfBDiscntDepositExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from PRESENT.TF_B_DISCNT_DEPOSIT
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.tydic.cbss.oracle.po.TfBDiscntDepositKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from PRESENT.TF_B_DISCNT_DEPOSIT
+    where ACTION_EVENT_ID = #{actionEventId,jdbcType=DECIMAL}
+      and PARTITION_ID = #{partitionId,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.tydic.cbss.oracle.po.TfBDiscntDepositKey">
+    delete from PRESENT.TF_B_DISCNT_DEPOSIT
+    where ACTION_EVENT_ID = #{actionEventId,jdbcType=DECIMAL}
+      and PARTITION_ID = #{partitionId,jdbcType=DECIMAL}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.tydic.cbss.oracle.po.TfBDiscntDepositExample">
+    delete from PRESENT.TF_B_DISCNT_DEPOSIT
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.tydic.cbss.oracle.po.TfBDiscntDeposit">
+    insert into PRESENT.TF_B_DISCNT_DEPOSIT (ACTION_EVENT_ID, PARTITION_ID, ACTION_RULE_ID, 
+      CHARGE_ID, EPARCHY_CODE, ACCT_BALANCE_ID, 
+      ACTION_CODE, COND_ID, OUTER_TRADE_ID, 
+      ACCT_ID, USER_ID, DISCNT_TYPE, 
+      DISCNT_ITEM_ID, DISCNT_MODE, MONEY, 
+      LEFT_MONEY, MONTHS, LIMIT_MODE, 
+      SPLIT_METHOD, LIMIT_MONEY, DELAY_TAG, 
+      START_CYCLE_ID, END_CYCLE_ID, TIMER_TYPE, 
+      ITEM_GRP_ID, DES_DEPOSIT_CODE, PER_SMS_ID, 
+      LAST_SMS_ID, FIRE_DAY, FIRED_MONTH, 
+      IF_TRANS, REL_ACTION_EVENT_ID, RECV_TIME, 
+      RECV_EPARCHY_CODE, RECV_CITY_CODE, RECV_DEPART_ID, 
+      RECV_STAFF_ID, CAN_USE_TAG, RSRV_INFO, 
+      RSRV_FEE, CANCEL_TAG, VERSION_NO, 
+      SUM_CONSUME, RESULT_INFO, CAN_PRE_TRANS, 
+      NET_TYPE_CODE, DEPOSIT_CODE, DISCOUNT_CODE, 
+      RSRV_DATE1, ACTIVE_TIME, CANCEL_STAFF_ID, 
+      CANCEL_DEPART_ID, CANCEL_CITY_CODE, CANCEL_EPARCHY_CODE, 
+      CANCEL_TIME, NEXT_DATE, P_DEPOSIT_CODE, 
+      IF_STOP_TRANS, CONSUME_THRESHOLD, BATCH_ID, 
+      TRANS_FORMULA, EXEC_DATE, TRANS_MONTHS, 
+      RECV_USER_ID, PROVINCE_CODE, PRODUCT_MONEY, 
+      PRODUCT_START_CYCLE, PRODUCT_END_CYCLE, ACTIVE_RECORD_ID
+      )
+    values (#{actionEventId,jdbcType=DECIMAL}, #{partitionId,jdbcType=DECIMAL}, #{actionRuleId,jdbcType=DECIMAL}, 
+      #{chargeId,jdbcType=DECIMAL}, #{eparchyCode,jdbcType=VARCHAR}, #{acctBalanceId,jdbcType=DECIMAL}, 
+      #{actionCode,jdbcType=DECIMAL}, #{condId,jdbcType=DECIMAL}, #{outerTradeId,jdbcType=VARCHAR}, 
+      #{acctId,jdbcType=DECIMAL}, #{userId,jdbcType=DECIMAL}, #{discntType,jdbcType=CHAR}, 
+      #{discntItemId,jdbcType=DECIMAL}, #{discntMode,jdbcType=CHAR}, #{money,jdbcType=DECIMAL}, 
+      #{leftMoney,jdbcType=DECIMAL}, #{months,jdbcType=DECIMAL}, #{limitMode,jdbcType=CHAR}, 
+      #{splitMethod,jdbcType=VARCHAR}, #{limitMoney,jdbcType=DECIMAL}, #{delayTag,jdbcType=CHAR}, 
+      #{startCycleId,jdbcType=DECIMAL}, #{endCycleId,jdbcType=DECIMAL}, #{timerType,jdbcType=CHAR}, 
+      #{itemGrpId,jdbcType=DECIMAL}, #{desDepositCode,jdbcType=DECIMAL}, #{perSmsId,jdbcType=DECIMAL}, 
+      #{lastSmsId,jdbcType=DECIMAL}, #{fireDay,jdbcType=DECIMAL}, #{firedMonth,jdbcType=DECIMAL}, 
+      #{ifTrans,jdbcType=CHAR}, #{relActionEventId,jdbcType=DECIMAL}, #{recvTime,jdbcType=DATE}, 
+      #{recvEparchyCode,jdbcType=VARCHAR}, #{recvCityCode,jdbcType=VARCHAR}, #{recvDepartId,jdbcType=VARCHAR}, 
+      #{recvStaffId,jdbcType=VARCHAR}, #{canUseTag,jdbcType=CHAR}, #{rsrvInfo,jdbcType=VARCHAR}, 
+      #{rsrvFee,jdbcType=DECIMAL}, #{cancelTag,jdbcType=CHAR}, #{versionNo,jdbcType=DECIMAL}, 
+      #{sumConsume,jdbcType=DECIMAL}, #{resultInfo,jdbcType=VARCHAR}, #{canPreTrans,jdbcType=CHAR}, 
+      #{netTypeCode,jdbcType=VARCHAR}, #{depositCode,jdbcType=DECIMAL}, #{discountCode,jdbcType=DECIMAL}, 
+      #{rsrvDate1,jdbcType=DATE}, #{activeTime,jdbcType=DATE}, #{cancelStaffId,jdbcType=VARCHAR}, 
+      #{cancelDepartId,jdbcType=VARCHAR}, #{cancelCityCode,jdbcType=VARCHAR}, #{cancelEparchyCode,jdbcType=VARCHAR}, 
+      #{cancelTime,jdbcType=DATE}, #{nextDate,jdbcType=DATE}, #{pDepositCode,jdbcType=DECIMAL}, 
+      #{ifStopTrans,jdbcType=CHAR}, #{consumeThreshold,jdbcType=DECIMAL}, #{batchId,jdbcType=DECIMAL}, 
+      #{transFormula,jdbcType=VARCHAR}, #{execDate,jdbcType=DATE}, #{transMonths,jdbcType=DECIMAL}, 
+      #{recvUserId,jdbcType=DECIMAL}, #{provinceCode,jdbcType=VARCHAR}, #{productMoney,jdbcType=DECIMAL}, 
+      #{productStartCycle,jdbcType=DECIMAL}, #{productEndCycle,jdbcType=DECIMAL}, #{activeRecordId,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tydic.cbss.oracle.po.TfBDiscntDeposit">
+    insert into PRESENT.TF_B_DISCNT_DEPOSIT
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="actionEventId != null">
+        ACTION_EVENT_ID,
+      </if>
+      <if test="partitionId != null">
+        PARTITION_ID,
+      </if>
+      <if test="actionRuleId != null">
+        ACTION_RULE_ID,
+      </if>
+      <if test="chargeId != null">
+        CHARGE_ID,
+      </if>
+      <if test="eparchyCode != null">
+        EPARCHY_CODE,
+      </if>
+      <if test="acctBalanceId != null">
+        ACCT_BALANCE_ID,
+      </if>
+      <if test="actionCode != null">
+        ACTION_CODE,
+      </if>
+      <if test="condId != null">
+        COND_ID,
+      </if>
+      <if test="outerTradeId != null">
+        OUTER_TRADE_ID,
+      </if>
+      <if test="acctId != null">
+        ACCT_ID,
+      </if>
+      <if test="userId != null">
+        USER_ID,
+      </if>
+      <if test="discntType != null">
+        DISCNT_TYPE,
+      </if>
+      <if test="discntItemId != null">
+        DISCNT_ITEM_ID,
+      </if>
+      <if test="discntMode != null">
+        DISCNT_MODE,
+      </if>
+      <if test="money != null">
+        MONEY,
+      </if>
+      <if test="leftMoney != null">
+        LEFT_MONEY,
+      </if>
+      <if test="months != null">
+        MONTHS,
+      </if>
+      <if test="limitMode != null">
+        LIMIT_MODE,
+      </if>
+      <if test="splitMethod != null">
+        SPLIT_METHOD,
+      </if>
+      <if test="limitMoney != null">
+        LIMIT_MONEY,
+      </if>
+      <if test="delayTag != null">
+        DELAY_TAG,
+      </if>
+      <if test="startCycleId != null">
+        START_CYCLE_ID,
+      </if>
+      <if test="endCycleId != null">
+        END_CYCLE_ID,
+      </if>
+      <if test="timerType != null">
+        TIMER_TYPE,
+      </if>
+      <if test="itemGrpId != null">
+        ITEM_GRP_ID,
+      </if>
+      <if test="desDepositCode != null">
+        DES_DEPOSIT_CODE,
+      </if>
+      <if test="perSmsId != null">
+        PER_SMS_ID,
+      </if>
+      <if test="lastSmsId != null">
+        LAST_SMS_ID,
+      </if>
+      <if test="fireDay != null">
+        FIRE_DAY,
+      </if>
+      <if test="firedMonth != null">
+        FIRED_MONTH,
+      </if>
+      <if test="ifTrans != null">
+        IF_TRANS,
+      </if>
+      <if test="relActionEventId != null">
+        REL_ACTION_EVENT_ID,
+      </if>
+      <if test="recvTime != null">
+        RECV_TIME,
+      </if>
+      <if test="recvEparchyCode != null">
+        RECV_EPARCHY_CODE,
+      </if>
+      <if test="recvCityCode != null">
+        RECV_CITY_CODE,
+      </if>
+      <if test="recvDepartId != null">
+        RECV_DEPART_ID,
+      </if>
+      <if test="recvStaffId != null">
+        RECV_STAFF_ID,
+      </if>
+      <if test="canUseTag != null">
+        CAN_USE_TAG,
+      </if>
+      <if test="rsrvInfo != null">
+        RSRV_INFO,
+      </if>
+      <if test="rsrvFee != null">
+        RSRV_FEE,
+      </if>
+      <if test="cancelTag != null">
+        CANCEL_TAG,
+      </if>
+      <if test="versionNo != null">
+        VERSION_NO,
+      </if>
+      <if test="sumConsume != null">
+        SUM_CONSUME,
+      </if>
+      <if test="resultInfo != null">
+        RESULT_INFO,
+      </if>
+      <if test="canPreTrans != null">
+        CAN_PRE_TRANS,
+      </if>
+      <if test="netTypeCode != null">
+        NET_TYPE_CODE,
+      </if>
+      <if test="depositCode != null">
+        DEPOSIT_CODE,
+      </if>
+      <if test="discountCode != null">
+        DISCOUNT_CODE,
+      </if>
+      <if test="rsrvDate1 != null">
+        RSRV_DATE1,
+      </if>
+      <if test="activeTime != null">
+        ACTIVE_TIME,
+      </if>
+      <if test="cancelStaffId != null">
+        CANCEL_STAFF_ID,
+      </if>
+      <if test="cancelDepartId != null">
+        CANCEL_DEPART_ID,
+      </if>
+      <if test="cancelCityCode != null">
+        CANCEL_CITY_CODE,
+      </if>
+      <if test="cancelEparchyCode != null">
+        CANCEL_EPARCHY_CODE,
+      </if>
+      <if test="cancelTime != null">
+        CANCEL_TIME,
+      </if>
+      <if test="nextDate != null">
+        NEXT_DATE,
+      </if>
+      <if test="pDepositCode != null">
+        P_DEPOSIT_CODE,
+      </if>
+      <if test="ifStopTrans != null">
+        IF_STOP_TRANS,
+      </if>
+      <if test="consumeThreshold != null">
+        CONSUME_THRESHOLD,
+      </if>
+      <if test="batchId != null">
+        BATCH_ID,
+      </if>
+      <if test="transFormula != null">
+        TRANS_FORMULA,
+      </if>
+      <if test="execDate != null">
+        EXEC_DATE,
+      </if>
+      <if test="transMonths != null">
+        TRANS_MONTHS,
+      </if>
+      <if test="recvUserId != null">
+        RECV_USER_ID,
+      </if>
+      <if test="provinceCode != null">
+        PROVINCE_CODE,
+      </if>
+      <if test="productMoney != null">
+        PRODUCT_MONEY,
+      </if>
+      <if test="productStartCycle != null">
+        PRODUCT_START_CYCLE,
+      </if>
+      <if test="productEndCycle != null">
+        PRODUCT_END_CYCLE,
+      </if>
+      <if test="activeRecordId != null">
+        ACTIVE_RECORD_ID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="actionEventId != null">
+        #{actionEventId,jdbcType=DECIMAL},
+      </if>
+      <if test="partitionId != null">
+        #{partitionId,jdbcType=DECIMAL},
+      </if>
+      <if test="actionRuleId != null">
+        #{actionRuleId,jdbcType=DECIMAL},
+      </if>
+      <if test="chargeId != null">
+        #{chargeId,jdbcType=DECIMAL},
+      </if>
+      <if test="eparchyCode != null">
+        #{eparchyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="acctBalanceId != null">
+        #{acctBalanceId,jdbcType=DECIMAL},
+      </if>
+      <if test="actionCode != null">
+        #{actionCode,jdbcType=DECIMAL},
+      </if>
+      <if test="condId != null">
+        #{condId,jdbcType=DECIMAL},
+      </if>
+      <if test="outerTradeId != null">
+        #{outerTradeId,jdbcType=VARCHAR},
+      </if>
+      <if test="acctId != null">
+        #{acctId,jdbcType=DECIMAL},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=DECIMAL},
+      </if>
+      <if test="discntType != null">
+        #{discntType,jdbcType=CHAR},
+      </if>
+      <if test="discntItemId != null">
+        #{discntItemId,jdbcType=DECIMAL},
+      </if>
+      <if test="discntMode != null">
+        #{discntMode,jdbcType=CHAR},
+      </if>
+      <if test="money != null">
+        #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="leftMoney != null">
+        #{leftMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="months != null">
+        #{months,jdbcType=DECIMAL},
+      </if>
+      <if test="limitMode != null">
+        #{limitMode,jdbcType=CHAR},
+      </if>
+      <if test="splitMethod != null">
+        #{splitMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="limitMoney != null">
+        #{limitMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="delayTag != null">
+        #{delayTag,jdbcType=CHAR},
+      </if>
+      <if test="startCycleId != null">
+        #{startCycleId,jdbcType=DECIMAL},
+      </if>
+      <if test="endCycleId != null">
+        #{endCycleId,jdbcType=DECIMAL},
+      </if>
+      <if test="timerType != null">
+        #{timerType,jdbcType=CHAR},
+      </if>
+      <if test="itemGrpId != null">
+        #{itemGrpId,jdbcType=DECIMAL},
+      </if>
+      <if test="desDepositCode != null">
+        #{desDepositCode,jdbcType=DECIMAL},
+      </if>
+      <if test="perSmsId != null">
+        #{perSmsId,jdbcType=DECIMAL},
+      </if>
+      <if test="lastSmsId != null">
+        #{lastSmsId,jdbcType=DECIMAL},
+      </if>
+      <if test="fireDay != null">
+        #{fireDay,jdbcType=DECIMAL},
+      </if>
+      <if test="firedMonth != null">
+        #{firedMonth,jdbcType=DECIMAL},
+      </if>
+      <if test="ifTrans != null">
+        #{ifTrans,jdbcType=CHAR},
+      </if>
+      <if test="relActionEventId != null">
+        #{relActionEventId,jdbcType=DECIMAL},
+      </if>
+      <if test="recvTime != null">
+        #{recvTime,jdbcType=DATE},
+      </if>
+      <if test="recvEparchyCode != null">
+        #{recvEparchyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="recvCityCode != null">
+        #{recvCityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="recvDepartId != null">
+        #{recvDepartId,jdbcType=VARCHAR},
+      </if>
+      <if test="recvStaffId != null">
+        #{recvStaffId,jdbcType=VARCHAR},
+      </if>
+      <if test="canUseTag != null">
+        #{canUseTag,jdbcType=CHAR},
+      </if>
+      <if test="rsrvInfo != null">
+        #{rsrvInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="rsrvFee != null">
+        #{rsrvFee,jdbcType=DECIMAL},
+      </if>
+      <if test="cancelTag != null">
+        #{cancelTag,jdbcType=CHAR},
+      </if>
+      <if test="versionNo != null">
+        #{versionNo,jdbcType=DECIMAL},
+      </if>
+      <if test="sumConsume != null">
+        #{sumConsume,jdbcType=DECIMAL},
+      </if>
+      <if test="resultInfo != null">
+        #{resultInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="canPreTrans != null">
+        #{canPreTrans,jdbcType=CHAR},
+      </if>
+      <if test="netTypeCode != null">
+        #{netTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="depositCode != null">
+        #{depositCode,jdbcType=DECIMAL},
+      </if>
+      <if test="discountCode != null">
+        #{discountCode,jdbcType=DECIMAL},
+      </if>
+      <if test="rsrvDate1 != null">
+        #{rsrvDate1,jdbcType=DATE},
+      </if>
+      <if test="activeTime != null">
+        #{activeTime,jdbcType=DATE},
+      </if>
+      <if test="cancelStaffId != null">
+        #{cancelStaffId,jdbcType=VARCHAR},
+      </if>
+      <if test="cancelDepartId != null">
+        #{cancelDepartId,jdbcType=VARCHAR},
+      </if>
+      <if test="cancelCityCode != null">
+        #{cancelCityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cancelEparchyCode != null">
+        #{cancelEparchyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cancelTime != null">
+        #{cancelTime,jdbcType=DATE},
+      </if>
+      <if test="nextDate != null">
+        #{nextDate,jdbcType=DATE},
+      </if>
+      <if test="pDepositCode != null">
+        #{pDepositCode,jdbcType=DECIMAL},
+      </if>
+      <if test="ifStopTrans != null">
+        #{ifStopTrans,jdbcType=CHAR},
+      </if>
+      <if test="consumeThreshold != null">
+        #{consumeThreshold,jdbcType=DECIMAL},
+      </if>
+      <if test="batchId != null">
+        #{batchId,jdbcType=DECIMAL},
+      </if>
+      <if test="transFormula != null">
+        #{transFormula,jdbcType=VARCHAR},
+      </if>
+      <if test="execDate != null">
+        #{execDate,jdbcType=DATE},
+      </if>
+      <if test="transMonths != null">
+        #{transMonths,jdbcType=DECIMAL},
+      </if>
+      <if test="recvUserId != null">
+        #{recvUserId,jdbcType=DECIMAL},
+      </if>
+      <if test="provinceCode != null">
+        #{provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="productMoney != null">
+        #{productMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="productStartCycle != null">
+        #{productStartCycle,jdbcType=DECIMAL},
+      </if>
+      <if test="productEndCycle != null">
+        #{productEndCycle,jdbcType=DECIMAL},
+      </if>
+      <if test="activeRecordId != null">
+        #{activeRecordId,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.tydic.cbss.oracle.po.TfBDiscntDepositExample" resultType="java.lang.Long">
+    select count(*) from PRESENT.TF_B_DISCNT_DEPOSIT
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update PRESENT.TF_B_DISCNT_DEPOSIT
+    <set>
+      <if test="record.actionEventId != null">
+        ACTION_EVENT_ID = #{record.actionEventId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.partitionId != null">
+        PARTITION_ID = #{record.partitionId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.actionRuleId != null">
+        ACTION_RULE_ID = #{record.actionRuleId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.chargeId != null">
+        CHARGE_ID = #{record.chargeId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.eparchyCode != null">
+        EPARCHY_CODE = #{record.eparchyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.acctBalanceId != null">
+        ACCT_BALANCE_ID = #{record.acctBalanceId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.actionCode != null">
+        ACTION_CODE = #{record.actionCode,jdbcType=DECIMAL},
+      </if>
+      <if test="record.condId != null">
+        COND_ID = #{record.condId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.outerTradeId != null">
+        OUTER_TRADE_ID = #{record.outerTradeId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.acctId != null">
+        ACCT_ID = #{record.acctId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.userId != null">
+        USER_ID = #{record.userId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.discntType != null">
+        DISCNT_TYPE = #{record.discntType,jdbcType=CHAR},
+      </if>
+      <if test="record.discntItemId != null">
+        DISCNT_ITEM_ID = #{record.discntItemId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.discntMode != null">
+        DISCNT_MODE = #{record.discntMode,jdbcType=CHAR},
+      </if>
+      <if test="record.money != null">
+        MONEY = #{record.money,jdbcType=DECIMAL},
+      </if>
+      <if test="record.leftMoney != null">
+        LEFT_MONEY = #{record.leftMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="record.months != null">
+        MONTHS = #{record.months,jdbcType=DECIMAL},
+      </if>
+      <if test="record.limitMode != null">
+        LIMIT_MODE = #{record.limitMode,jdbcType=CHAR},
+      </if>
+      <if test="record.splitMethod != null">
+        SPLIT_METHOD = #{record.splitMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="record.limitMoney != null">
+        LIMIT_MONEY = #{record.limitMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="record.delayTag != null">
+        DELAY_TAG = #{record.delayTag,jdbcType=CHAR},
+      </if>
+      <if test="record.startCycleId != null">
+        START_CYCLE_ID = #{record.startCycleId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.endCycleId != null">
+        END_CYCLE_ID = #{record.endCycleId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.timerType != null">
+        TIMER_TYPE = #{record.timerType,jdbcType=CHAR},
+      </if>
+      <if test="record.itemGrpId != null">
+        ITEM_GRP_ID = #{record.itemGrpId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.desDepositCode != null">
+        DES_DEPOSIT_CODE = #{record.desDepositCode,jdbcType=DECIMAL},
+      </if>
+      <if test="record.perSmsId != null">
+        PER_SMS_ID = #{record.perSmsId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.lastSmsId != null">
+        LAST_SMS_ID = #{record.lastSmsId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.fireDay != null">
+        FIRE_DAY = #{record.fireDay,jdbcType=DECIMAL},
+      </if>
+      <if test="record.firedMonth != null">
+        FIRED_MONTH = #{record.firedMonth,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ifTrans != null">
+        IF_TRANS = #{record.ifTrans,jdbcType=CHAR},
+      </if>
+      <if test="record.relActionEventId != null">
+        REL_ACTION_EVENT_ID = #{record.relActionEventId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.recvTime != null">
+        RECV_TIME = #{record.recvTime,jdbcType=DATE},
+      </if>
+      <if test="record.recvEparchyCode != null">
+        RECV_EPARCHY_CODE = #{record.recvEparchyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recvCityCode != null">
+        RECV_CITY_CODE = #{record.recvCityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recvDepartId != null">
+        RECV_DEPART_ID = #{record.recvDepartId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recvStaffId != null">
+        RECV_STAFF_ID = #{record.recvStaffId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.canUseTag != null">
+        CAN_USE_TAG = #{record.canUseTag,jdbcType=CHAR},
+      </if>
+      <if test="record.rsrvInfo != null">
+        RSRV_INFO = #{record.rsrvInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rsrvFee != null">
+        RSRV_FEE = #{record.rsrvFee,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cancelTag != null">
+        CANCEL_TAG = #{record.cancelTag,jdbcType=CHAR},
+      </if>
+      <if test="record.versionNo != null">
+        VERSION_NO = #{record.versionNo,jdbcType=DECIMAL},
+      </if>
+      <if test="record.sumConsume != null">
+        SUM_CONSUME = #{record.sumConsume,jdbcType=DECIMAL},
+      </if>
+      <if test="record.resultInfo != null">
+        RESULT_INFO = #{record.resultInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.canPreTrans != null">
+        CAN_PRE_TRANS = #{record.canPreTrans,jdbcType=CHAR},
+      </if>
+      <if test="record.netTypeCode != null">
+        NET_TYPE_CODE = #{record.netTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.depositCode != null">
+        DEPOSIT_CODE = #{record.depositCode,jdbcType=DECIMAL},
+      </if>
+      <if test="record.discountCode != null">
+        DISCOUNT_CODE = #{record.discountCode,jdbcType=DECIMAL},
+      </if>
+      <if test="record.rsrvDate1 != null">
+        RSRV_DATE1 = #{record.rsrvDate1,jdbcType=DATE},
+      </if>
+      <if test="record.activeTime != null">
+        ACTIVE_TIME = #{record.activeTime,jdbcType=DATE},
+      </if>
+      <if test="record.cancelStaffId != null">
+        CANCEL_STAFF_ID = #{record.cancelStaffId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cancelDepartId != null">
+        CANCEL_DEPART_ID = #{record.cancelDepartId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cancelCityCode != null">
+        CANCEL_CITY_CODE = #{record.cancelCityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cancelEparchyCode != null">
+        CANCEL_EPARCHY_CODE = #{record.cancelEparchyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cancelTime != null">
+        CANCEL_TIME = #{record.cancelTime,jdbcType=DATE},
+      </if>
+      <if test="record.nextDate != null">
+        NEXT_DATE = #{record.nextDate,jdbcType=DATE},
+      </if>
+      <if test="record.pDepositCode != null">
+        P_DEPOSIT_CODE = #{record.pDepositCode,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ifStopTrans != null">
+        IF_STOP_TRANS = #{record.ifStopTrans,jdbcType=CHAR},
+      </if>
+      <if test="record.consumeThreshold != null">
+        CONSUME_THRESHOLD = #{record.consumeThreshold,jdbcType=DECIMAL},
+      </if>
+      <if test="record.batchId != null">
+        BATCH_ID = #{record.batchId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.transFormula != null">
+        TRANS_FORMULA = #{record.transFormula,jdbcType=VARCHAR},
+      </if>
+      <if test="record.execDate != null">
+        EXEC_DATE = #{record.execDate,jdbcType=DATE},
+      </if>
+      <if test="record.transMonths != null">
+        TRANS_MONTHS = #{record.transMonths,jdbcType=DECIMAL},
+      </if>
+      <if test="record.recvUserId != null">
+        RECV_USER_ID = #{record.recvUserId,jdbcType=DECIMAL},
+      </if>
+      <if test="record.provinceCode != null">
+        PROVINCE_CODE = #{record.provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productMoney != null">
+        PRODUCT_MONEY = #{record.productMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="record.productStartCycle != null">
+        PRODUCT_START_CYCLE = #{record.productStartCycle,jdbcType=DECIMAL},
+      </if>
+      <if test="record.productEndCycle != null">
+        PRODUCT_END_CYCLE = #{record.productEndCycle,jdbcType=DECIMAL},
+      </if>
+      <if test="record.activeRecordId != null">
+        ACTIVE_RECORD_ID = #{record.activeRecordId,jdbcType=DECIMAL},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update PRESENT.TF_B_DISCNT_DEPOSIT
+    set ACTION_EVENT_ID = #{record.actionEventId,jdbcType=DECIMAL},
+      PARTITION_ID = #{record.partitionId,jdbcType=DECIMAL},
+      ACTION_RULE_ID = #{record.actionRuleId,jdbcType=DECIMAL},
+      CHARGE_ID = #{record.chargeId,jdbcType=DECIMAL},
+      EPARCHY_CODE = #{record.eparchyCode,jdbcType=VARCHAR},
+      ACCT_BALANCE_ID = #{record.acctBalanceId,jdbcType=DECIMAL},
+      ACTION_CODE = #{record.actionCode,jdbcType=DECIMAL},
+      COND_ID = #{record.condId,jdbcType=DECIMAL},
+      OUTER_TRADE_ID = #{record.outerTradeId,jdbcType=VARCHAR},
+      ACCT_ID = #{record.acctId,jdbcType=DECIMAL},
+      USER_ID = #{record.userId,jdbcType=DECIMAL},
+      DISCNT_TYPE = #{record.discntType,jdbcType=CHAR},
+      DISCNT_ITEM_ID = #{record.discntItemId,jdbcType=DECIMAL},
+      DISCNT_MODE = #{record.discntMode,jdbcType=CHAR},
+      MONEY = #{record.money,jdbcType=DECIMAL},
+      LEFT_MONEY = #{record.leftMoney,jdbcType=DECIMAL},
+      MONTHS = #{record.months,jdbcType=DECIMAL},
+      LIMIT_MODE = #{record.limitMode,jdbcType=CHAR},
+      SPLIT_METHOD = #{record.splitMethod,jdbcType=VARCHAR},
+      LIMIT_MONEY = #{record.limitMoney,jdbcType=DECIMAL},
+      DELAY_TAG = #{record.delayTag,jdbcType=CHAR},
+      START_CYCLE_ID = #{record.startCycleId,jdbcType=DECIMAL},
+      END_CYCLE_ID = #{record.endCycleId,jdbcType=DECIMAL},
+      TIMER_TYPE = #{record.timerType,jdbcType=CHAR},
+      ITEM_GRP_ID = #{record.itemGrpId,jdbcType=DECIMAL},
+      DES_DEPOSIT_CODE = #{record.desDepositCode,jdbcType=DECIMAL},
+      PER_SMS_ID = #{record.perSmsId,jdbcType=DECIMAL},
+      LAST_SMS_ID = #{record.lastSmsId,jdbcType=DECIMAL},
+      FIRE_DAY = #{record.fireDay,jdbcType=DECIMAL},
+      FIRED_MONTH = #{record.firedMonth,jdbcType=DECIMAL},
+      IF_TRANS = #{record.ifTrans,jdbcType=CHAR},
+      REL_ACTION_EVENT_ID = #{record.relActionEventId,jdbcType=DECIMAL},
+      RECV_TIME = #{record.recvTime,jdbcType=DATE},
+      RECV_EPARCHY_CODE = #{record.recvEparchyCode,jdbcType=VARCHAR},
+      RECV_CITY_CODE = #{record.recvCityCode,jdbcType=VARCHAR},
+      RECV_DEPART_ID = #{record.recvDepartId,jdbcType=VARCHAR},
+      RECV_STAFF_ID = #{record.recvStaffId,jdbcType=VARCHAR},
+      CAN_USE_TAG = #{record.canUseTag,jdbcType=CHAR},
+      RSRV_INFO = #{record.rsrvInfo,jdbcType=VARCHAR},
+      RSRV_FEE = #{record.rsrvFee,jdbcType=DECIMAL},
+      CANCEL_TAG = #{record.cancelTag,jdbcType=CHAR},
+      VERSION_NO = #{record.versionNo,jdbcType=DECIMAL},
+      SUM_CONSUME = #{record.sumConsume,jdbcType=DECIMAL},
+      RESULT_INFO = #{record.resultInfo,jdbcType=VARCHAR},
+      CAN_PRE_TRANS = #{record.canPreTrans,jdbcType=CHAR},
+      NET_TYPE_CODE = #{record.netTypeCode,jdbcType=VARCHAR},
+      DEPOSIT_CODE = #{record.depositCode,jdbcType=DECIMAL},
+      DISCOUNT_CODE = #{record.discountCode,jdbcType=DECIMAL},
+      RSRV_DATE1 = #{record.rsrvDate1,jdbcType=DATE},
+      ACTIVE_TIME = #{record.activeTime,jdbcType=DATE},
+      CANCEL_STAFF_ID = #{record.cancelStaffId,jdbcType=VARCHAR},
+      CANCEL_DEPART_ID = #{record.cancelDepartId,jdbcType=VARCHAR},
+      CANCEL_CITY_CODE = #{record.cancelCityCode,jdbcType=VARCHAR},
+      CANCEL_EPARCHY_CODE = #{record.cancelEparchyCode,jdbcType=VARCHAR},
+      CANCEL_TIME = #{record.cancelTime,jdbcType=DATE},
+      NEXT_DATE = #{record.nextDate,jdbcType=DATE},
+      P_DEPOSIT_CODE = #{record.pDepositCode,jdbcType=DECIMAL},
+      IF_STOP_TRANS = #{record.ifStopTrans,jdbcType=CHAR},
+      CONSUME_THRESHOLD = #{record.consumeThreshold,jdbcType=DECIMAL},
+      BATCH_ID = #{record.batchId,jdbcType=DECIMAL},
+      TRANS_FORMULA = #{record.transFormula,jdbcType=VARCHAR},
+      EXEC_DATE = #{record.execDate,jdbcType=DATE},
+      TRANS_MONTHS = #{record.transMonths,jdbcType=DECIMAL},
+      RECV_USER_ID = #{record.recvUserId,jdbcType=DECIMAL},
+      PROVINCE_CODE = #{record.provinceCode,jdbcType=VARCHAR},
+      PRODUCT_MONEY = #{record.productMoney,jdbcType=DECIMAL},
+      PRODUCT_START_CYCLE = #{record.productStartCycle,jdbcType=DECIMAL},
+      PRODUCT_END_CYCLE = #{record.productEndCycle,jdbcType=DECIMAL},
+      ACTIVE_RECORD_ID = #{record.activeRecordId,jdbcType=DECIMAL}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tydic.cbss.oracle.po.TfBDiscntDeposit">
+    update PRESENT.TF_B_DISCNT_DEPOSIT
+    <set>
+      <if test="actionRuleId != null">
+        ACTION_RULE_ID = #{actionRuleId,jdbcType=DECIMAL},
+      </if>
+      <if test="chargeId != null">
+        CHARGE_ID = #{chargeId,jdbcType=DECIMAL},
+      </if>
+      <if test="eparchyCode != null">
+        EPARCHY_CODE = #{eparchyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="acctBalanceId != null">
+        ACCT_BALANCE_ID = #{acctBalanceId,jdbcType=DECIMAL},
+      </if>
+      <if test="actionCode != null">
+        ACTION_CODE = #{actionCode,jdbcType=DECIMAL},
+      </if>
+      <if test="condId != null">
+        COND_ID = #{condId,jdbcType=DECIMAL},
+      </if>
+      <if test="outerTradeId != null">
+        OUTER_TRADE_ID = #{outerTradeId,jdbcType=VARCHAR},
+      </if>
+      <if test="acctId != null">
+        ACCT_ID = #{acctId,jdbcType=DECIMAL},
+      </if>
+      <if test="userId != null">
+        USER_ID = #{userId,jdbcType=DECIMAL},
+      </if>
+      <if test="discntType != null">
+        DISCNT_TYPE = #{discntType,jdbcType=CHAR},
+      </if>
+      <if test="discntItemId != null">
+        DISCNT_ITEM_ID = #{discntItemId,jdbcType=DECIMAL},
+      </if>
+      <if test="discntMode != null">
+        DISCNT_MODE = #{discntMode,jdbcType=CHAR},
+      </if>
+      <if test="money != null">
+        MONEY = #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="leftMoney != null">
+        LEFT_MONEY = #{leftMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="months != null">
+        MONTHS = #{months,jdbcType=DECIMAL},
+      </if>
+      <if test="limitMode != null">
+        LIMIT_MODE = #{limitMode,jdbcType=CHAR},
+      </if>
+      <if test="splitMethod != null">
+        SPLIT_METHOD = #{splitMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="limitMoney != null">
+        LIMIT_MONEY = #{limitMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="delayTag != null">
+        DELAY_TAG = #{delayTag,jdbcType=CHAR},
+      </if>
+      <if test="startCycleId != null">
+        START_CYCLE_ID = #{startCycleId,jdbcType=DECIMAL},
+      </if>
+      <if test="endCycleId != null">
+        END_CYCLE_ID = #{endCycleId,jdbcType=DECIMAL},
+      </if>
+      <if test="timerType != null">
+        TIMER_TYPE = #{timerType,jdbcType=CHAR},
+      </if>
+      <if test="itemGrpId != null">
+        ITEM_GRP_ID = #{itemGrpId,jdbcType=DECIMAL},
+      </if>
+      <if test="desDepositCode != null">
+        DES_DEPOSIT_CODE = #{desDepositCode,jdbcType=DECIMAL},
+      </if>
+      <if test="perSmsId != null">
+        PER_SMS_ID = #{perSmsId,jdbcType=DECIMAL},
+      </if>
+      <if test="lastSmsId != null">
+        LAST_SMS_ID = #{lastSmsId,jdbcType=DECIMAL},
+      </if>
+      <if test="fireDay != null">
+        FIRE_DAY = #{fireDay,jdbcType=DECIMAL},
+      </if>
+      <if test="firedMonth != null">
+        FIRED_MONTH = #{firedMonth,jdbcType=DECIMAL},
+      </if>
+      <if test="ifTrans != null">
+        IF_TRANS = #{ifTrans,jdbcType=CHAR},
+      </if>
+      <if test="relActionEventId != null">
+        REL_ACTION_EVENT_ID = #{relActionEventId,jdbcType=DECIMAL},
+      </if>
+      <if test="recvTime != null">
+        RECV_TIME = #{recvTime,jdbcType=DATE},
+      </if>
+      <if test="recvEparchyCode != null">
+        RECV_EPARCHY_CODE = #{recvEparchyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="recvCityCode != null">
+        RECV_CITY_CODE = #{recvCityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="recvDepartId != null">
+        RECV_DEPART_ID = #{recvDepartId,jdbcType=VARCHAR},
+      </if>
+      <if test="recvStaffId != null">
+        RECV_STAFF_ID = #{recvStaffId,jdbcType=VARCHAR},
+      </if>
+      <if test="canUseTag != null">
+        CAN_USE_TAG = #{canUseTag,jdbcType=CHAR},
+      </if>
+      <if test="rsrvInfo != null">
+        RSRV_INFO = #{rsrvInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="rsrvFee != null">
+        RSRV_FEE = #{rsrvFee,jdbcType=DECIMAL},
+      </if>
+      <if test="cancelTag != null">
+        CANCEL_TAG = #{cancelTag,jdbcType=CHAR},
+      </if>
+      <if test="versionNo != null">
+        VERSION_NO = #{versionNo,jdbcType=DECIMAL},
+      </if>
+      <if test="sumConsume != null">
+        SUM_CONSUME = #{sumConsume,jdbcType=DECIMAL},
+      </if>
+      <if test="resultInfo != null">
+        RESULT_INFO = #{resultInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="canPreTrans != null">
+        CAN_PRE_TRANS = #{canPreTrans,jdbcType=CHAR},
+      </if>
+      <if test="netTypeCode != null">
+        NET_TYPE_CODE = #{netTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="depositCode != null">
+        DEPOSIT_CODE = #{depositCode,jdbcType=DECIMAL},
+      </if>
+      <if test="discountCode != null">
+        DISCOUNT_CODE = #{discountCode,jdbcType=DECIMAL},
+      </if>
+      <if test="rsrvDate1 != null">
+        RSRV_DATE1 = #{rsrvDate1,jdbcType=DATE},
+      </if>
+      <if test="activeTime != null">
+        ACTIVE_TIME = #{activeTime,jdbcType=DATE},
+      </if>
+      <if test="cancelStaffId != null">
+        CANCEL_STAFF_ID = #{cancelStaffId,jdbcType=VARCHAR},
+      </if>
+      <if test="cancelDepartId != null">
+        CANCEL_DEPART_ID = #{cancelDepartId,jdbcType=VARCHAR},
+      </if>
+      <if test="cancelCityCode != null">
+        CANCEL_CITY_CODE = #{cancelCityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cancelEparchyCode != null">
+        CANCEL_EPARCHY_CODE = #{cancelEparchyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cancelTime != null">
+        CANCEL_TIME = #{cancelTime,jdbcType=DATE},
+      </if>
+      <if test="nextDate != null">
+        NEXT_DATE = #{nextDate,jdbcType=DATE},
+      </if>
+      <if test="pDepositCode != null">
+        P_DEPOSIT_CODE = #{pDepositCode,jdbcType=DECIMAL},
+      </if>
+      <if test="ifStopTrans != null">
+        IF_STOP_TRANS = #{ifStopTrans,jdbcType=CHAR},
+      </if>
+      <if test="consumeThreshold != null">
+        CONSUME_THRESHOLD = #{consumeThreshold,jdbcType=DECIMAL},
+      </if>
+      <if test="batchId != null">
+        BATCH_ID = #{batchId,jdbcType=DECIMAL},
+      </if>
+      <if test="transFormula != null">
+        TRANS_FORMULA = #{transFormula,jdbcType=VARCHAR},
+      </if>
+      <if test="execDate != null">
+        EXEC_DATE = #{execDate,jdbcType=DATE},
+      </if>
+      <if test="transMonths != null">
+        TRANS_MONTHS = #{transMonths,jdbcType=DECIMAL},
+      </if>
+      <if test="recvUserId != null">
+        RECV_USER_ID = #{recvUserId,jdbcType=DECIMAL},
+      </if>
+      <if test="provinceCode != null">
+        PROVINCE_CODE = #{provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="productMoney != null">
+        PRODUCT_MONEY = #{productMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="productStartCycle != null">
+        PRODUCT_START_CYCLE = #{productStartCycle,jdbcType=DECIMAL},
+      </if>
+      <if test="productEndCycle != null">
+        PRODUCT_END_CYCLE = #{productEndCycle,jdbcType=DECIMAL},
+      </if>
+      <if test="activeRecordId != null">
+        ACTIVE_RECORD_ID = #{activeRecordId,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where ACTION_EVENT_ID = #{actionEventId,jdbcType=DECIMAL}
+      and PARTITION_ID = #{partitionId,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tydic.cbss.oracle.po.TfBDiscntDeposit">
+    update PRESENT.TF_B_DISCNT_DEPOSIT
+    set ACTION_RULE_ID = #{actionRuleId,jdbcType=DECIMAL},
+      CHARGE_ID = #{chargeId,jdbcType=DECIMAL},
+      EPARCHY_CODE = #{eparchyCode,jdbcType=VARCHAR},
+      ACCT_BALANCE_ID = #{acctBalanceId,jdbcType=DECIMAL},
+      ACTION_CODE = #{actionCode,jdbcType=DECIMAL},
+      COND_ID = #{condId,jdbcType=DECIMAL},
+      OUTER_TRADE_ID = #{outerTradeId,jdbcType=VARCHAR},
+      ACCT_ID = #{acctId,jdbcType=DECIMAL},
+      USER_ID = #{userId,jdbcType=DECIMAL},
+      DISCNT_TYPE = #{discntType,jdbcType=CHAR},
+      DISCNT_ITEM_ID = #{discntItemId,jdbcType=DECIMAL},
+      DISCNT_MODE = #{discntMode,jdbcType=CHAR},
+      MONEY = #{money,jdbcType=DECIMAL},
+      LEFT_MONEY = #{leftMoney,jdbcType=DECIMAL},
+      MONTHS = #{months,jdbcType=DECIMAL},
+      LIMIT_MODE = #{limitMode,jdbcType=CHAR},
+      SPLIT_METHOD = #{splitMethod,jdbcType=VARCHAR},
+      LIMIT_MONEY = #{limitMoney,jdbcType=DECIMAL},
+      DELAY_TAG = #{delayTag,jdbcType=CHAR},
+      START_CYCLE_ID = #{startCycleId,jdbcType=DECIMAL},
+      END_CYCLE_ID = #{endCycleId,jdbcType=DECIMAL},
+      TIMER_TYPE = #{timerType,jdbcType=CHAR},
+      ITEM_GRP_ID = #{itemGrpId,jdbcType=DECIMAL},
+      DES_DEPOSIT_CODE = #{desDepositCode,jdbcType=DECIMAL},
+      PER_SMS_ID = #{perSmsId,jdbcType=DECIMAL},
+      LAST_SMS_ID = #{lastSmsId,jdbcType=DECIMAL},
+      FIRE_DAY = #{fireDay,jdbcType=DECIMAL},
+      FIRED_MONTH = #{firedMonth,jdbcType=DECIMAL},
+      IF_TRANS = #{ifTrans,jdbcType=CHAR},
+      REL_ACTION_EVENT_ID = #{relActionEventId,jdbcType=DECIMAL},
+      RECV_TIME = #{recvTime,jdbcType=DATE},
+      RECV_EPARCHY_CODE = #{recvEparchyCode,jdbcType=VARCHAR},
+      RECV_CITY_CODE = #{recvCityCode,jdbcType=VARCHAR},
+      RECV_DEPART_ID = #{recvDepartId,jdbcType=VARCHAR},
+      RECV_STAFF_ID = #{recvStaffId,jdbcType=VARCHAR},
+      CAN_USE_TAG = #{canUseTag,jdbcType=CHAR},
+      RSRV_INFO = #{rsrvInfo,jdbcType=VARCHAR},
+      RSRV_FEE = #{rsrvFee,jdbcType=DECIMAL},
+      CANCEL_TAG = #{cancelTag,jdbcType=CHAR},
+      VERSION_NO = #{versionNo,jdbcType=DECIMAL},
+      SUM_CONSUME = #{sumConsume,jdbcType=DECIMAL},
+      RESULT_INFO = #{resultInfo,jdbcType=VARCHAR},
+      CAN_PRE_TRANS = #{canPreTrans,jdbcType=CHAR},
+      NET_TYPE_CODE = #{netTypeCode,jdbcType=VARCHAR},
+      DEPOSIT_CODE = #{depositCode,jdbcType=DECIMAL},
+      DISCOUNT_CODE = #{discountCode,jdbcType=DECIMAL},
+      RSRV_DATE1 = #{rsrvDate1,jdbcType=DATE},
+      ACTIVE_TIME = #{activeTime,jdbcType=DATE},
+      CANCEL_STAFF_ID = #{cancelStaffId,jdbcType=VARCHAR},
+      CANCEL_DEPART_ID = #{cancelDepartId,jdbcType=VARCHAR},
+      CANCEL_CITY_CODE = #{cancelCityCode,jdbcType=VARCHAR},
+      CANCEL_EPARCHY_CODE = #{cancelEparchyCode,jdbcType=VARCHAR},
+      CANCEL_TIME = #{cancelTime,jdbcType=DATE},
+      NEXT_DATE = #{nextDate,jdbcType=DATE},
+      P_DEPOSIT_CODE = #{pDepositCode,jdbcType=DECIMAL},
+      IF_STOP_TRANS = #{ifStopTrans,jdbcType=CHAR},
+      CONSUME_THRESHOLD = #{consumeThreshold,jdbcType=DECIMAL},
+      BATCH_ID = #{batchId,jdbcType=DECIMAL},
+      TRANS_FORMULA = #{transFormula,jdbcType=VARCHAR},
+      EXEC_DATE = #{execDate,jdbcType=DATE},
+      TRANS_MONTHS = #{transMonths,jdbcType=DECIMAL},
+      RECV_USER_ID = #{recvUserId,jdbcType=DECIMAL},
+      PROVINCE_CODE = #{provinceCode,jdbcType=VARCHAR},
+      PRODUCT_MONEY = #{productMoney,jdbcType=DECIMAL},
+      PRODUCT_START_CYCLE = #{productStartCycle,jdbcType=DECIMAL},
+      PRODUCT_END_CYCLE = #{productEndCycle,jdbcType=DECIMAL},
+      ACTIVE_RECORD_ID = #{activeRecordId,jdbcType=DECIMAL}
+    where ACTION_EVENT_ID = #{actionEventId,jdbcType=DECIMAL}
+      and PARTITION_ID = #{partitionId,jdbcType=DECIMAL}
+  </update>
+  <select id="selectByExampleOne" parameterType="com.tydic.cbss.oracle.po.TfBDiscntDepositExample" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from  PRESENT.TF_B_DISCNT_DEPOSIT
+    <include refid="Example_Where_Clause" />
+  </select>
+</mapper>
