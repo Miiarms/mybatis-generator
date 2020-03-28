@@ -36,7 +36,7 @@
 		</javaTypeResolver>
 
 		<!-- targetProject:生成PO类的位置 -->
-		<javaModelGenerator targetPackage="com.tydic.cbss.oracle.po"
+		<javaModelGenerator targetPackage="com.cai.cbss.oracle.po"
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
@@ -44,14 +44,14 @@
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
         <!-- targetProject:mapper映射文件生成的位置 -->
-		<sqlMapGenerator targetPackage="com.tydic.cbss.oracle.mapper" 
+		<sqlMapGenerator targetPackage="com.cai.cbss.oracle.mapper" 
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 		<!-- targetPackage：mapper接口生成的位置 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.tydic.cbss.oracle.dao"
+			targetPackage="com.cai.cbss.oracle.dao"
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
@@ -75,115 +75,7 @@
          -->
          
 		<!-- 指定数据库表,多个表配置多个table标签 -->
-		<!-- <table schema="root" tableName="bf_account" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="bf_acct_balance" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		 	<generatedKey column="ACCT_BALANCE_ID" sqlStatement="MySql" type="post" identity="true"/>
-		</table>
-		<table schema="root" tableName="bf_counter" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		 	<generatedKey column="counter_id" sqlStatement="MySql" type="post" identity="true"/>
-		</table>
-		<table schema="root" tableName="bf_cust" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="bf_present_msg" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		 	<generatedKey column="PRESENT_MSG_ID" sqlStatement="MySql" type="post" identity="true"/>
-		</table>
-		<table schema="root" tableName="bf_subs_product" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		 	<generatedKey column="SUBS_PRODUCT_ID" sqlStatement="MySql" type="post" identity="true"/>
-		</table>
-		<table schema="root" tableName="bf_subscriber" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_up_user" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_o_leaverealfee" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_b_paylog" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_f_account" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_f_customer" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_f_payrelation" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_f_user" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_f_user_discnt" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_f_user_member" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_f_user_product" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_f_user_sp" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_f_user_svc" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="tf_f_user_svcstate" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table>
-		<table schema="root" tableName="bf_summary_month" 
-			enableCountByExample="true" enableDeleteByExample="true" 
-			enableDeleteByPrimaryKey="true" enableInsert="true" enableSelectByExample="true"
-		 	enableSelectByPrimaryKey="true" enableUpdateByExample="true" enableUpdateByPrimaryKey="true" >
-		</table> -->
+		
 		
 		<table schema="present" tableName="TF_B_USER_ACTIVE_RECORD" 
 			enableCountByExample="true" enableDeleteByExample="true" 
